@@ -24,7 +24,6 @@ export default function Page() {
         }
     };
 
-
     return (
         <div className="p-4 max-w-3xl mx-auto">
             <h2 className="text-lg font-semibold mb-2">Update Banners</h2>

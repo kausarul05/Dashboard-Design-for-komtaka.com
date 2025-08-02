@@ -18,11 +18,10 @@ interface Order {
     role: string;
   };
   projectName: string;
-  team: {
-    images: string[];
-  };
+  orderNo: string;
   status: string;
-  budget: string;
+  quantity: string;
+  price: string;
 }
 
 // Define the table data using the interface
@@ -34,15 +33,10 @@ const tableData: Order[] = [
       name: "Lindsey Curtis",
       role: "Web Designer",
     },
-    projectName: "Agency Website",
-    team: {
-      images: [
-        "/images/user/user-22.jpg",
-        "/images/user/user-23.jpg",
-        "/images/user/user-24.jpg",
-      ],
-    },
-    budget: "3.9K",
+    projectName: "H1 Gamepad Website",
+    orderNo: "123456",
+    quantity: "2",
+    price : "$200",
     status: "Active",
   },
   {
@@ -52,11 +46,10 @@ const tableData: Order[] = [
       name: "Kaiya George",
       role: "Project Manager",
     },
-    projectName: "Technology",
-    team: {
-      images: ["/images/user/user-25.jpg", "/images/user/user-26.jpg"],
-    },
-    budget: "24.9K",
+    projectName: "H1 Gamepad",
+    orderNo: "123456",
+    quantity: "2",
+    price : "$200",
     status: "Pending",
   },
   {
@@ -66,11 +59,10 @@ const tableData: Order[] = [
       name: "Zain Geidt",
       role: "Content Writing",
     },
-    projectName: "Blog Writing",
-    team: {
-      images: ["/images/user/user-27.jpg"],
-    },
-    budget: "12.7K",
+    projectName: "H1 Gamepad Writing",
+    orderNo: "123456",
+    quantity: "2",
+    price : "$200",
     status: "Active",
   },
   {
@@ -80,15 +72,10 @@ const tableData: Order[] = [
       name: "Abram Schleifer",
       role: "Digital Marketer",
     },
-    projectName: "Social Media",
-    team: {
-      images: [
-        "/images/user/user-28.jpg",
-        "/images/user/user-29.jpg",
-        "/images/user/user-30.jpg",
-      ],
-    },
-    budget: "2.8K",
+    projectName: "H1 Gamepad Media",
+    orderNo: "123456",
+    quantity: "2",
+    price : "$200",
     status: "Cancel",
   },
   {
@@ -98,15 +85,10 @@ const tableData: Order[] = [
       name: "Carla George",
       role: "Front-end Developer",
     },
-    projectName: "Website",
-    team: {
-      images: [
-        "/images/user/user-31.jpg",
-        "/images/user/user-32.jpg",
-        "/images/user/user-33.jpg",
-      ],
-    },
-    budget: "4.5K",
+    projectName: "H1 Gamepad",
+    orderNo: "123456",
+    quantity: "2",
+    price : "$200",
     status: "Active",
   },
 ];
@@ -124,31 +106,37 @@ export default function BasicTableOne() {
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  User
+                  Product
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Project Name
+                  Title
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Team
+                  Order No
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Status
+                  Satus
                 </TableCell>
                 <TableCell
                   isHeader
                   className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
                 >
-                  Budget
+                  Quantity
+                </TableCell>
+                <TableCell
+                  isHeader
+                  className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+                >
+                  Price
                 </TableCell>
               </TableRow>
             </TableHeader>
@@ -167,14 +155,14 @@ export default function BasicTableOne() {
                           alt={order.user.name}
                         />
                       </div>
-                      <div>
+                      {/* <div>
                         <span className="block font-medium text-gray-800 text-theme-sm dark:text-white/90">
                           {order.user.name}
                         </span>
                         <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
                           {order.user.role}
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                   </TableCell>
                   <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
@@ -182,20 +170,7 @@ export default function BasicTableOne() {
                   </TableCell>
                   <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
                     <div className="flex -space-x-2">
-                      {order.team.images.map((teamImage, index) => (
-                        <div
-                          key={index}
-                          className="w-6 h-6 overflow-hidden border-2 border-white rounded-full dark:border-gray-900"
-                        >
-                          <Image
-                            width={24}
-                            height={24}
-                            src={teamImage}
-                            alt={`Team member ${index + 1}`}
-                            className="w-full"
-                          />
-                        </div>
-                      ))}
+                       #{order.orderNo}
                     </div>
                   </TableCell>
                   <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
@@ -213,7 +188,10 @@ export default function BasicTableOne() {
                     </Badge>
                   </TableCell>
                   <TableCell className="px-4 py-3 text-gray-500 text-theme-sm dark:text-gray-400">
-                    {order.budget}
+                    {order.quantity}
+                  </TableCell>
+                  <TableCell className="px-4 py-3 text-gray-500 text-theme-sm dark:text-gray-400">
+                    {order.price}
                   </TableCell>
                 </TableRow>
               ))}
