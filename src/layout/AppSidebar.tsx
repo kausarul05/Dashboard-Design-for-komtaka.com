@@ -5,19 +5,19 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "../context/SidebarContext";
 import {
-  BoxCubeIcon,
+  // BoxCubeIcon,
   CalenderIcon,
   ChevronDownIcon,
   GridIcon,
   HorizontaLDots,
   ListIcon,
-  PageIcon,
-  PieChartIcon,
-  PlugInIcon,
-  TableIcon,
+  // PageIcon,
+  // PieChartIcon,
+  // PlugInIcon,
+  // TableIcon,
   UserCircleIcon,
 } from "../icons/index";
-import SidebarWidget from "./SidebarWidget";
+// import SidebarWidget from "./SidebarWidget";
 
 type NavItem = {
   name: string;
@@ -36,7 +36,7 @@ const navItems: NavItem[] = [
   {
     icon: <CalenderIcon />,
     name: "Banners",
-    path: "/banners",
+    path: "/bannar",
   },
   {
     icon: <UserCircleIcon />,
@@ -341,14 +341,14 @@ const AppSidebar: React.FC = () => {
             <>
               <Image
                 className="dark:hidden"
-                src="/images/logo/logo.svg"
+                src="/images/logo.png"
                 alt="Logo"
                 width={150}
                 height={40}
               />
               <Image
                 className="hidden dark:block"
-                src="/images/logo/logo-dark.svg"
+                src="/images/logo.png"
                 alt="Logo"
                 width={150}
                 height={40}
@@ -356,7 +356,7 @@ const AppSidebar: React.FC = () => {
             </>
           ) : (
             <Image
-              src="/images/logo/logo-icon.svg"
+              src="/images/logo"
               alt="Logo"
               width={32}
               height={32}
