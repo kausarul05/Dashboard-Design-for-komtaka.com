@@ -45,9 +45,9 @@ const navItems: NavItem[] = [
   },
 
   {
-    name: "Manage Accounts",
+    name: "Add Products",
     icon: <ListIcon />,
-    path : "/manage-accounts",
+    path : "/addProducts",
     // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
   },
   {
