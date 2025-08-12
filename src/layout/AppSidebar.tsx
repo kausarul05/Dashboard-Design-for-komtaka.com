@@ -51,6 +51,12 @@ const navItems: NavItem[] = [
     // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
   },
   {
+    name: "Complate Order",
+    icon: <ListIcon />,
+    path : "/complateOrder",
+    // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+  },
+  {
     name: "Payment Info",
     icon: <ListIcon />,
     path : "/paymentInfo",
