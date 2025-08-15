@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 
 export default function Page() {
   const [newCategory, setNewCategory] = useState("")
-  const [showAddCategory, setShowAddCategory] = useState(true) 
 
   const handleAddCategory = () => {
     if (newCategory.trim() !== "") {
@@ -12,8 +11,6 @@ export default function Page() {
       setNewCategory("")
     }
   }
-
-  if (!showAddCategory) return null // If hidden, render nothing (or a button to re-show)
 
   return (
     <div>

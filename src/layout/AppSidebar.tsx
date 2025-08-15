@@ -61,28 +61,28 @@ const navItems: NavItem[] = [
     path : "/complateOrder",
     // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
   },
-  {
-    name: "Payment Info",
-    icon: <ListIcon />,
-    path : "/paymentInfo",
-    // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
-  },
-  {
-    name: "Comments",
-    icon: <ListIcon />,
-    path : "/comments",
-    // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
-  },
-  {
-    name: "Settings",
-    icon: <ListIcon />,
-    path : "/settings",
-    // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
-  },
+  // {
+  //   name: "Payment Info",
+  //   icon: <ListIcon />,
+  //   path : "/paymentInfo",
+  //   // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+  // },
+  // {
+  //   name: "Comments",
+  //   icon: <ListIcon />,
+  //   path : "/comments",
+  //   // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+  // },
+  // {
+  //   name: "Settings",
+  //   icon: <ListIcon />,
+  //   path : "/settings",
+  //   // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+  // },
   {
     name: "Exit",
     icon: <ListIcon />,
-    path : "/exit",
+    path : "/signin",
     // subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
   },
 
