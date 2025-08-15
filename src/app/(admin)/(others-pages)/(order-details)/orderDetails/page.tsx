@@ -6,9 +6,9 @@ import React from 'react'
 export default function page() {
     return (
         <div>
-            <PageBreadcrumb pageTitle="Basic Table" />
+            {/* <PageBreadcrumb pageTitle="" /> */}
             <div className="space-y-6">
-                <ComponentCard title="Basic Table 1">
+                <ComponentCard title="Order Details">
                     <BasicTableOne />
                 </ComponentCard>
             </div>
